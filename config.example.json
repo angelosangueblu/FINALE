@@ -1,0 +1,31 @@
+{
+  "stateFilePath": "./state/seen-products.json",
+  "defaults": {
+    "refreshIntervalMs": 30000,
+    "minDiscountPercent": 70
+  },
+  "browser": {
+    "headless": true,
+    "viewport": { "width": 1400, "height": 900 },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+  },
+  "notifications": {
+    "telegram": {
+      "botToken": "INSERISCI_BOT_TOKEN",
+      "chatId": "INSERISCI_CHAT_ID"
+    }
+  },
+  "monitors": [
+    {
+      "name": "Categoria Offerte",
+      "url": "https://esempio.com/categoria",
+      "extractorScriptPath": "./scripts/extractor.js",
+      "refreshIntervalMs": 30000,
+      "minDiscountPercent": 75,
+      "waitForSelector": ".product-card",
+      "selectorTimeoutMs": 25000,
+      "postLoadWaitMs": 3000,
+      "navigationTimeoutMs": 60000
+    }
+  ]
+}
