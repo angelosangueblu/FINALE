@@ -1,0 +1,17 @@
+{
+  "name": "discount-monitor",
+  "version": "1.0.0",
+  "description": "Monitor prodotti con refresh periodico e notifiche Telegram",
+  "main": "src/monitor.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/monitor.js --config ./config.json",
+    "check": "node --check src/monitor.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0"
+  }
+}
